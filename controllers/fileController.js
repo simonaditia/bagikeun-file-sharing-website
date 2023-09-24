@@ -24,6 +24,7 @@ const uploadFile = (req, res) => {
     // Store File
     upload(req, res, async (err) => {
         // Validate Request
+        console.log(req.file)
         if (!req.file) {
             return res.json({
                 error: "All fields are required."
