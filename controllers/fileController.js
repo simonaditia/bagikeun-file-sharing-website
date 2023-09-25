@@ -3,6 +3,7 @@ const File = require("../models/file")
 const admin = require("firebase-admin");
 
 const serviceAccountKey = JSON.parse(process.env.SERVICE_ACCOUNT_KEY)
+console.log(serviceAccountKey)
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccountKey),
     storageBucket: process.env.STORAGE_BUCKET
