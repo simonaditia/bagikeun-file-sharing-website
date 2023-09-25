@@ -5,10 +5,16 @@ const showRoute = require("./routes/show")
 const downloadRoute = require("./routes/download")
 const app = express()
 const path = require("path")
+const cors = require("cors")
 const PORT = 3001
 
 const connectDB = require("./config/db")
 connectDB()
+
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENTS.split(",")
+}
+app.use(cors(corsOptions))
 
 app.use(express.static(__dirname + "/public/"));
 app.use(express.json())
