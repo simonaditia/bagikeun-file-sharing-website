@@ -7,8 +7,7 @@ const fileSchema = new Schema({
         required: true
     },
     path: {
-        type: String,
-        required: true
+        type: String
     },
     size: {
         type: Number,
@@ -17,6 +16,9 @@ const fileSchema = new Schema({
     uuid: {
         type: String,
         required: true
+    },
+    url: {
+        type: String
     },
     sender: {
         type: String,

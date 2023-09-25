@@ -13,7 +13,8 @@ const showController = async (req, res) => {
             uuid: file.uuid,
             fileName: file.filename,
             fileSize: file.size,
-            downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
+            downloadLink: file.url
+            // downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
         })
     } catch (error) {
         return res.render("download", {

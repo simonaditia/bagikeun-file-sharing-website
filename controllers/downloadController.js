@@ -11,7 +11,8 @@ const downloadController = async (req, res) => {
         })
     }
 
-    const filePath = `${__dirname}/../${file.path}`
+    // const filePath = `${__dirname}/../${file.path}`
+    const filePath = file.url
     res.download(filePath)
 }
 module.exports = downloadController
