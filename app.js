@@ -10,7 +10,7 @@ const PORT = 3001
 const connectDB = require("./config/db")
 connectDB()
 
-app.use(express.static("public"))
+app.use(express.static(__dirname + "/public/"));
 app.use(express.json())
 
 app.set("views", path.join(__dirname, "/views"))
