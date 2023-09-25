@@ -16,8 +16,8 @@ const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-// const baseURL = "https://bagikeun-file-sharing.vercel.app";
-const baseURL = "http://localhost:3001";
+const baseURL = "https://bagikeun-file-sharing.vercel.app";
+// const baseURL = "http://localhost:3001";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 
